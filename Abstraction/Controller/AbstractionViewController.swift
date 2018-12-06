@@ -40,5 +40,45 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(abstractionLevel)ViewController")
     }
+    //MARK: -Lifecycle methods
+    public override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        dataSource = self
+        
+        if let firstViewController = orderedAbstractionViews.first
+        {
+            setViewControllers([firstViewController],
+                direction: .forward,
+                animated: true,
+                completion: nil)
+        }
+    }
+    //MARK:- Data
+    //Swipe left
+    public func pageViewController(_pageViewController: UIPageViewController, viewControllerVefore viewController:
+    UIViewController) -> UIViewController?
+    {
+        guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
+            else
+        {
+            return nil
+        }
+    }
+    let previousIndex = viewControllerIndex - 1
+    
+    guard previousIndex >= 0
+    else
+    {
+    return orderedAbstractionViews.last
+    }
+    guard orderedAbstractionViews.count > previousIndex
+    else
+    {
+    nil
+    }
+  return orderedAbstractionViews[previousIndex]
+
+
 }
 
