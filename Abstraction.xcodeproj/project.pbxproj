@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		99D39BD521B6D3C000ADD749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D39BD421B6D3C000ADD749 /* AppDelegate.swift */; };
-		99D39BD721B6D3C000ADD749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D39BD621B6D3C000ADD749 /* ViewController.swift */; };
+		99D39BD721B6D3C000ADD749 /* AbstractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D39BD621B6D3C000ADD749 /* AbstractionViewController.swift */; };
 		99D39BDA21B6D3C000ADD749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D39BD821B6D3C000ADD749 /* Main.storyboard */; };
 		99D39BDC21B6D3C200ADD749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D39BDB21B6D3C200ADD749 /* Assets.xcassets */; };
-		99D39BDF21B6D3C200ADD749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D39BDD21B6D3C200ADD749 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99D39BD121B6D3BF00ADD749 /* Abstraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abstraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D39BD421B6D3C000ADD749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99D39BD621B6D3C000ADD749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99D39BD621B6D3C000ADD749 /* AbstractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractionViewController.swift; sourceTree = "<group>"; };
 		99D39BD921B6D3C000ADD749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99D39BDB21B6D3C200ADD749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		99D39BDE21B6D3C200ADD749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99D39BE021B6D3C200ADD749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +72,6 @@
 		99D39BE721B6D51300ADD749 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				99D39BDD21B6D3C200ADD749 /* LaunchScreen.storyboard */,
 				99D39BD821B6D3C000ADD749 /* Main.storyboard */,
 			);
 			path = View;
@@ -83,7 +80,7 @@
 		99D39BE821B6D57A00ADD749 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				99D39BD621B6D3C000ADD749 /* ViewController.swift */,
+				99D39BD621B6D3C000ADD749 /* AbstractionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,7 +143,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99D39BDF21B6D3C200ADD749 /* LaunchScreen.storyboard in Resources */,
 				99D39BDC21B6D3C200ADD749 /* Assets.xcassets in Resources */,
 				99D39BDA21B6D3C000ADD749 /* Main.storyboard in Resources */,
 			);
@@ -159,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99D39BD721B6D3C000ADD749 /* ViewController.swift in Sources */,
+				99D39BD721B6D3C000ADD749 /* AbstractionViewController.swift in Sources */,
 				99D39BD521B6D3C000ADD749 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,14 +169,6 @@
 				99D39BD921B6D3C000ADD749 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		99D39BDD21B6D3C200ADD749 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99D39BDE21B6D3C200ADD749 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
