@@ -54,7 +54,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
                 completion: nil)
         }
     }
-    //MARK:- Data
+    //MARK:- Datasource required methods
     //Swipe left
     public func pageViewController(_pageViewController: UIPageViewController, viewControllerVefore viewController:
     UIViewController) -> UIViewController?
@@ -64,7 +64,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
         {
             return nil
         }
-    }
+    
     let previousIndex = viewControllerIndex - 1
     
     guard previousIndex >= 0
@@ -75,10 +75,49 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     guard orderedAbstractionViews.count > previousIndex
     else
     {
-    nil
+   return nil
     }
   return orderedAbstractionViews[previousIndex]
 
-
 }
 
+ //Swipe right
+    public func pageViewController(_pageViewController: UIPageViewController, viewControllerAfter viewController:
+    UIViewController) -> UIViewController?
+    {
+        guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
+        else
+        {
+            return nil
+        }
+        let nextIndex = viewControllerIndex + 1
+        guard nextIndex >= 0
+        else
+        {
+            return nil
+        }
+        guard nextIndex < orderedAbstractionViews.count
+        else
+        {
+            return orderedAbstractionViews.first
+        }
+        return orderedAbstractionViews[nextIndex]
+    }
+    //MARK:- Optional Support for the dots in UIPAgeViewController
+    public func presentationCount(for pageViewController:
+    UIPageViewController)-> Int
+    
+    {
+        return orderedAbstractionViews.count
+    }
+    public func presentationIndex(for pageViewController: UIPageViewController) -> Int
+    {
+        guard let firstViewController = viewControllers?.first, let firstViewControllerIndex =
+            orderedAbstractionViews.index(of: firstViewController)
+            else
+        {
+            return 0
+        }
+        return firstViewControllerIndex
+    }
+}
